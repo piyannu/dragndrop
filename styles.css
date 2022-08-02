@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://sendgrid.com/wp-content/uploads/2020/06/iStock-1164222265-3200x2000.jpg);
+    background-size: cover;
+    display: flex;
+    padding-top: 200px;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+}
+.col-header {
+    width: 250px;
+    box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+    border-radius: 20px;
+    padding: 0.8rem 1rem;
+    color: #fff;
+}
+.item {
+    width: 200px;
+    height: 80px;
+    border: 1px solid #27f28d;
+    box-shadow: 0 0 10px rgb(112, 255, 217);
+    border-radius: 70px;
+    background:white;
+    padding: 1rem 1rem;
+    color: #52665c;
+    text-align: center;
+    cursor: grab;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+.item:active {
+    cursor: grabbing;
+}
+.placeholder {
+    width: 200px;
+    height: 80px;
+    border: 1px solid #27f28d;
+    box-shadow: 0 0 5px  rgba(105, 241, 243, 0.953);
+    background-color: rgba(124, 226, 214, 0.845);
+    border-radius: 70px;
+}
+
+.start {
+    background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+}
+.progress {
+    background: linear-gradient(90deg, #209cff 0%, #68c0cf 100%);
+}
+.done {
+    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.hold {
+    background: rgb(255, 255, 255);
+    color: #000100;
+
+}
+.hide {
+    display: none;
+}
+/* .hovered {
+    border: 1px solid #27f28d;
+    background-color: rgba(124, 226, 161, 0.3);
+    border-radius: 20px; */
+/* } */
