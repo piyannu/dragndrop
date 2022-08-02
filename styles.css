@@ -6,6 +6,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url(https://sendgrid.com/wp-content/uploads/2020/06/iStock-1164222265-3200x2000.jpg);
+    /* z-index: 2; */
     background-size: cover;
     display: flex;
     padding-top: 200px;
@@ -29,39 +30,83 @@ body {
     color: #fff;
 }
 .item {
-    width: 200px;
-    height: 80px;
-    border: 1px solid #27f28d;
-    box-shadow: 0 0 10px rgb(112, 255, 217);
+    width: 199px;
+    height: 78px;
+    /* border: 1px solid #27f28d; */
+    position: absolute;
     border-radius: 70px;
     background:white;
     padding: 1rem 1rem;
     color: #52665c;
     text-align: center;
     cursor: grab;
-    margin-top: -1px;
-    margin-left: -1px;
+    /* margin-top: 1px;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    margin-right: 1px; */
+
 }
+
 .item:active {
     cursor: grabbing;
 }
 .placeholder {
-    width: 200px;
-    height: 80px;
-    border: 1px solid #27f28d;
-    box-shadow: 0 0 5px  rgba(105, 241, 243, 0.953);
-    background-color: rgba(124, 226, 214, 0.845);
+    width: 199px;
+    height: 79px;
+    /* border: 1px solid #27f28d; */
+    /* box-shadow: 0 0 5px  rgba(105, 241, 243, 0.953); */
+    /* background-color: rgba(124, 226, 214, 0.845); */
     border-radius: 70px;
+}
+
+.color1 {
+    background: rgba(211, 20, 90, 80%);
+}
+.color2 {
+    background: rgba(58, 35, 178, 80%);
+
+}
+.color3 {
+    background: rgba(41, 206, 226, 80%);
+
+}
+.shadow:before,
+.shadow:after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(200px + 2px);
+    height: calc(79px + 2px);
+    z-index:-1;
+    animation: animate 30s linear infinite;
+    border-radius: 70px;
+      
+}
+.shadow:after {
+    filter: blur(15px);
+    
+}
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 300% 0;
+    }
+    100% {
+        background-position: 400% 0;
+    }
 }
 
 .start {
     background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
 }
 .progress {
-    background: linear-gradient(90deg, #209cff 0%, #68c0cf 100%);
+    background: linear-gradient(90deg, #184b75 0%, #4a60df 100%);
 }
 .done {
-    background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+    background: linear-gradient(90deg, #415de7 0%, #e82c32 100%);
 }
 
 .hold {
